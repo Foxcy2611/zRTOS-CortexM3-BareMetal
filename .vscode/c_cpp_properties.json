@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "STM32F103C8T6 (WSL)",
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mcpu=cortex-m3",
+                "-mthumb"
+            ],
+            "intelliSenseMode": "linux-gcc-arm",
+            "cStandard": "c11",
+            "defines": [
+                "STM32F10X_MD",
+                "USE_STDPERIPH_DRIVER"
+            ],
+            "includePath": [
+                "${workspaceFolder}/bsp/stm32f103c8t6/inc",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/kernel",
+                "${workspaceFolder}/examples",
+                "${workspaceFolder}/kernel/internal",
+                "${workspaceFolder}/port/cortex_m3",
+                "${workspaceFolder}/libraries/CMSIS/CM3/CoreSupport",
+                "${workspaceFolder}/libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x",
+                "${workspaceFolder}/libraries/STM32F10x_StdPeriph_Driver/inc"
+            ]
+        }
+    ],
+    "version": 4
+}

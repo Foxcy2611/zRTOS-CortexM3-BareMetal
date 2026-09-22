@@ -13,6 +13,8 @@ Không thay `PENDING` bằng `PASS` nếu chưa quan sát trực tiếp trên bo
 - USB-UART 3.3 V.
 - ADC test source 0-3.3 V.
 - HSE/clock source theo board thực tế.
+- Board clone C8 được ST-Link báo 128 KiB Flash và 20 KiB SRAM; phải xác minh
+  khả năng đọc/ghi vùng Flash trên 64 KiB trước khi dùng làm release gate.
 
 ---
 
@@ -29,6 +31,8 @@ Không thay `PENDING` bằng `PASS` nếu chưa quan sát trực tiếp trên bo
 | OpenOCD version | PENDING |
 | ST-Link | PENDING |
 | Clock/HSE | PENDING |
+| Flash size ST-Link báo | 128 KiB (theo log board hiện tại) |
+| Flash trên 64 KiB đã flash/read-back | PENDING |
 
 ---
 
@@ -53,6 +57,8 @@ Không thay `PENDING` bằng `PASS` nếu chưa quan sát trực tiếp trên bo
 - [ ] Event xảy ra sát timeout -> task chỉ wake đúng một lần.
 - [ ] Làm đầy queue/log path -> kernel vẫn sống và error/drop counter đúng nếu có.
 - [ ] Reset/reflash nhiều lần có và không debugger.
+- [ ] Flash/read-back dữ liệu tại địa chỉ từ `0x08010000` trở lên để xác nhận
+      board clone thực sự dùng được toàn bộ 128 KiB Flash.
 
 ---
 

@@ -1,0 +1,38 @@
+---
+# zRTOS .clang-format
+BasedOnStyle: LLVM
+Language: Cpp
+
+# Thụt lề và độ dài dòng
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+
+# Căn chỉnh con trỏ (Pointer)
+PointerAlignment: Right
+
+# Căn chỉnh thẳng hàng giúp code C nhúng dễ đọc hơn
+AlignConsecutiveMacros: true
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignTrailingComments: true
+
+# Xử lý dấu ngoặc nhọn (Braces) theo chuẩn 1TBS / Attach (Giống ảnh)
+BreakBeforeBraces: Attach
+
+# Cách xử lý switch-case (Thụt lề case vào trong 1 cấp)
+IndentCaseLabels: true
+
+# Khoảng trắng trước dấu ngoặc đơn (áp dụng cho if/for/while, không áp dụng cho hàm)
+SpaceBeforeParens: ControlStatements
+
+# Sắp xếp Include headers theo thứ tự bảng chữ cái
+SortIncludes: true
+
+# Không cho phép gộp các hàm/block ngắn trên cùng 1 dòng
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+...

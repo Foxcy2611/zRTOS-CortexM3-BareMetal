@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cmake",
+            "label": "zRTOS: configure",
+            "command": "configure",
+            "problemMatcher": [],
+            "detail": "Configure zRTOS using the active CMake preset"
+        },
+        {
+            "type": "cmake",
+            "label": "zRTOS: build",
+            "command": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build the active zRTOS CMake target"
+        }
+    ]
+}

@@ -19,14 +19,19 @@ zRTOS được phát triển và kiểm thử trên STM32F103C8T6 sử dụng AR
 | MCU | STM32F103C8T6 |
 | CPU | ARM Cortex-M3 |
 | Core clock | tối đa 72 MHz |
-| Flash | 128 KB |
+| Flash | 128 KB được ST-Link báo trên board clone; C8 chính hãng danh nghĩa 64 KB |
 | SRAM | 20 KB |
 | Architecture | ARMv7-M |
-| Board | STM32F103C8T6 development board / Blue Pill |
 | External clock | HSE 8 MHz |
 | Debug interface | SWD |
+| Board | STM32F103C8T6 development board / Blue Pill Clone |
+| Family | STM32F10xx Medium-density (`STM32F10X_MD`) |
 
-> zRTOS hiện tập trung vào STM32F103C8T6. Các port cho MCU hoặc architecture khác không nằm trong scope của.
+> Target hiện tại là board STM32F103C8T6-compatible clone. Linker dùng 128 KB
+> Flash theo thông tin ST-Link đọc được từ board này; đây không phải dung lượng
+> bảo đảm cho mọi chip mang mã C8. Cần kiểm chứng vùng trên 64 KB bằng
+> flash/read-back trước khi coi toàn bộ 128 KB đã được xác thực. Các port cho
+> MCU hoặc architecture khác không nằm trong scope của dự án này.
 
 ### 1.2. Development toolchain
 
